@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+public class LocateLargest {
+	public static void main(String[] args) {
+		// setting variables needed
+		int rows, cols;
+		int[] size = new int[2];
+		double[][] matrix = null;
+		
+		size = getMatrixSize();
+		rows = size[0];
+		cols = size[1];
+		
+		matrix = new double[rows][cols];
+		
+		getArrayMax(matrix, rows, cols);
+		
+		
+		System.out.println("the location of the largest element is at (" + maxRow + ", " + maxCol + ")");
+	}
+
+
+	private static int[] getArrayMax(double[][] matrix, int rows, int cols) {
+		Scanner input = new Scanner(System.in);
+		int maxRow = -1, maxCol = -1;
+		double max = 0;
+		int[] location=
+				
+		System.out.println("Enter the array: ");
+		for(int i = 0; i < rows; i++) {
+			for(int j = 0; j < cols; j++) {
+				matrix[i][j] = input.nextDouble();
+	
+				if(matrix[i][j] >= max) {
+					maxRow = i;
+					maxCol = j;
+					max = matrix[i][j];
+				}
+			}
+		}
+		
+		return location;
+	}
+
+
+	private static int[] getMatrixSize() {
+		int[] size = new int[2];
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("Enter the number of rows and columns of the array: ");
+		size[0] = input.nextInt();
+		size[1] = input.nextInt();
+		
+		return size;
+	}
+}

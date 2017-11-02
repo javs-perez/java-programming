@@ -1,0 +1,15 @@
+
+public class quizhw {
+	public static void main(String[] args) {
+		double[] myList = {1, 2, 5, 9, 4};
+		
+		for(int i=1; i<myList.length; i++) {
+			   myList[i] = myList[i-1];
+			}
+		
+		
+		for(int i=0; i<myList.length; i++) {
+			   System.out.print(myList[i] + “ “);
+			}
+	}
+}

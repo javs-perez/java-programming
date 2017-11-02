@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class SumByColumn {
+	public static void main(String[] args) {
+		// setting variables needed
+		
+		double[][] matrix = new double[3][4];
+		
+		promptUser(matrix);
+		
+		displaySums(matrix);
+	}
+	
+	private static void displaySums(double[][] matrix) {
+		for(int i = 0; i < matrix.length; i++) {
+			System.out.print("sum of column " + i + " equals: " + sumColumn(matrix, i));
+		}
+	}
+
+	private static void promptUser(double[][] matrix) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("Enter a 3-by-4 matrix row by row:");
+		for(int i = 0; i < 3; i++) {
+			for(int j = 0; j < 4; j++) {
+				matrix[i][j] = input.nextDouble();
+			}	
+		}
+		
+		input.close();
+	}
+
+	public static double sumColumn(double[][] m, int columnIndex) {
+		
+	}
+}

@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class Grading {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		int numStudents, max = 0;
+		int[] scores;
+		char studentGrade;
+		
+		System.out.print("Enter the number of students: ");
+		numStudents = input.nextInt();
+		
+		scores = new int[numStudents];
+		
+		System.out.print("Enter " + numStudents + " scores: ");
+		for(int i = 0; i < scores.length; i++) {
+			scores[i] = input.nextInt();
+			if(scores[i] > max) {
+				max = scores[i];
+			}
+		}
+		
+		input.close();
+		
+		for(int i = 0; i < scores.length; i++) {
+			if(scores[i] >= max - 10) {
+				studentGrade = 'A';
+			} else if(scores[i] >= max - 20) {
+				studentGrade = 'B';
+			} else if(scores[i] >= max - 30) {
+				studentGrade = 'C';
+			} else if(scores[i] >= max - 40) {
+				studentGrade = 'D';
+			} else {
+				studentGrade = 'F';
+			}
+			
+			System.out.print("Student " + i + " score is " + scores[i] + " and grade is " + studentGrade);
+			
+		}
+	}
+
+}

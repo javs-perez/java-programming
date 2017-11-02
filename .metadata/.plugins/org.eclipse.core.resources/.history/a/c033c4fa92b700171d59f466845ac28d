@@ -1,0 +1,9 @@
+
+public class quizhw {
+	public static void main(String[] args) {
+		String[] myList = new String[5];
+		
+		
+		System.out.print(myList[5]);
+	}
+}

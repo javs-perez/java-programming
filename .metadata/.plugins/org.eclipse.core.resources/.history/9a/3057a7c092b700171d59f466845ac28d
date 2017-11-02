@@ -1,0 +1,8 @@
+
+public class quizhw {
+	public static void main(String[] args) {
+		int myList[] = new int[5];
+		
+		System.out.print(myList[2]);
+	}
+}

@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Grading {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		int numStudents;
+		int[] scores;
+		
+		System.out.print("Enter the number of students: ");
+		numStudents = input.nextInt();
+		
+		scores = new int[numStudents];
+		
+		System.out.print("Enter " + numStudents + " scores: ");
+		for(int i = 0; i < scores.length; i++) {
+			scores[i] = input.nextInt();
+		}
+	}
+
+}
