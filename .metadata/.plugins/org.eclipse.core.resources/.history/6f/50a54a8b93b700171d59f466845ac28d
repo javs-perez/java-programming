@@ -1,8 +1,0 @@
-
-public class quizhw {
-	public static void main(String[] args) {
-		int[] a = new int[9];
-		
-		System.out.println(a[0]);
-	}
-}
